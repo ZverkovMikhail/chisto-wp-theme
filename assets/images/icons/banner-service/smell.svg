@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   fill="none"
+   version="1.1"
+   id="svg452"
+   sodipodi:docname="smell.svg"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview454"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="15.488"
+     inkscape:cx="1.8078"
+     inkscape:cy="15.108"
+     inkscape:current-layer="svg452" />
+  <g
+     clip-path="url(#clip0_1_613)"
+     id="g445"
+     transform="translate(0,3.2)">
+    <path
+       d="M 22.4,1.6 V 2.15 C 22.4,4.06 23.16,5.89 24.51,7.24 L 25.56,8.29 C 26.61,9.34 27.2,10.765 27.2,12.25 V 12.8 C 27.2,13.685 26.485,14.4 25.6,14.4 24.715,14.4 24,13.685 24,12.8 V 12.25 C 24,11.615 23.745,11.005 23.295,10.555 L 22.245,9.505 C 20.295,7.555 19.2,4.905 19.2,2.15 V 1.6 C 19.2,0.715 19.915,0 20.8,0 21.685,0 22.4,0.715 22.4,1.6 Z M 28.8,12.8 V 12.25 C 28.8,10.34 28.04,8.51 26.69,7.16 L 25.64,6.11 C 24.59,5.06 24,3.635 24,2.15 V 1.6 C 24,0.715 24.715,0 25.6,0 26.485,0 27.2,0.715 27.2,1.6 V 2.15 C 27.2,2.785 27.455,3.395 27.905,3.845 L 28.955,4.895 C 30.905,6.845 32,9.49 32,12.25 V 12.8 C 32,13.685 31.285,14.4 30.4,14.4 29.515,14.4 28.8,13.685 28.8,12.8 Z M 0,20.8 C 0,19.035 1.435,17.6 3.2,17.6 H 20.8 C 21.685,17.6 22.4,18.315 22.4,19.2 V 24 C 22.4,24.885 21.685,25.6 20.8,25.6 H 3.2 C 1.435,25.6 0,24.165 0,22.4 Z M 11.2,20.8 V 22.4 H 19.2 V 20.8 Z M 25.6,17.6 C 26.485,17.6 27.2,18.315 27.2,19.2 V 24 C 27.2,24.885 26.485,25.6 25.6,25.6 24.715,25.6 24,24.885 24,24 V 19.2 C 24,18.315 24.715,17.6 25.6,17.6 Z M 30.4,17.6 C 31.285,17.6 32,18.315 32,19.2 V 24 C 32,24.885 31.285,25.6 30.4,25.6 29.515,25.6 28.8,24.885 28.8,24 V 19.2 C 28.8,18.315 29.515,17.6 30.4,17.6 Z"
+       fill="#3e9197"
+       id="path443" />
+  </g>
+  <defs
+     id="defs450">
+    <clipPath
+       id="clip0_1_613">
+      <rect
+         width="32"
+         height="25.6"
+         fill="#ffffff"
+         id="rect447"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+</svg>

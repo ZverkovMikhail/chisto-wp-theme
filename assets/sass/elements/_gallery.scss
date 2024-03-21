@@ -1,0 +1,141 @@
+@import "../vars";
+.gallery {
+  &__img-slider {
+    position: relative;
+    width: 752px;
+    height: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-color: $color-background-alt;
+    border-radius: 8px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    transition: all 0.6s ease-out, opacity 1s;
+
+    &-text {
+      position: absolute;
+      z-index: 100;
+    }
+  }
+
+  &__img-wrap {
+    overflow: hidden;
+
+    &_before {
+      & .gallery__img {
+        left: 0;
+        border-radius: 8px 0 0 8px;
+      }
+
+      & .gallery__img-text {
+        top: 16px;
+        right: calc(50% + 32px);
+      }
+    }
+
+    &_after {
+      & .gallery__img {
+        right: 0;
+        border-radius: 0 8px 8px 0;
+      }
+
+      & .gallery__img-text {
+        top: 16px;
+        left: calc(50% + 32px);
+      }
+    }
+  }
+
+  &__img-block {
+    &_prev {
+      & .gallery__img {
+        opacity: 0;
+        transition: all 0.6s ease-out;
+      }
+
+      & .gallery__img-wrap_before .gallery__img {
+        left: -100%;
+      }
+
+      & .gallery__img-wrap_after .gallery__img {
+        right: -100%;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      content: '';
+      width: 4px;
+      height: 100%;
+      background-color: $color-text;
+    }
+  }
+
+  &__button-block {
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+    margin-top: 52px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover .gallery__button-icon {
+      fill: $color-accent-lite;
+      stroke: $color-accent-lite;
+      border-color: $color-accent-lite;
+    }
+
+    &:active .gallery__button-icon {
+      transform: scale(0.95);
+    }
+
+    &_disable .gallery__button-icon, &_disable:hover .gallery__button-icon, &_disable:active .gallery__button-icon {
+      fill: $color-gallery-button-disable;
+      stroke: $color-gallery-button-disable;
+      border-color: $color-gallery-button-disable;
+      transform: scale(1);
+    }
+
+    &_prev {
+      transform: rotate(180deg);
+    }
+
+    &-icon {
+      fill: $color-accent;
+      stroke: $color-accent;
+      height: 48px;
+      width: 48px;
+      border: 2px solid $color-accent;
+      border-radius: 24px;
+      transition: all 0.3s;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .gallery {
+    &__img-slider {
+      position: relative;
+      width: auto;
+      height: calc((100vw - 16px) / 1.78);
+      max-height: 315px;
+
+    }
+
+    &__img {
+      width: 50%;
+    }
+  }
+}

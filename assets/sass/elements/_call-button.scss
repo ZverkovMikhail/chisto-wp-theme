@@ -1,0 +1,75 @@
+@import "../vars";
+
+.call-button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: $color-text-alt;
+  background-color: $color-button;
+  font-weight: 500;
+  letter-spacing: .02rem;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 48px;
+  border: 1px solid #ffac72;
+  border-radius: 8px;
+  transition: all .3s;
+
+  &__icon {
+    stroke: $color-button-hover;
+    transition: all 0.3s;
+    z-index: 10;
+    margin-left: -8px;
+  }
+
+  &:hover {
+    background-color: $color-accent-lite;
+    color: $color-text-alt;
+  }
+
+  &:hover .call-button__icon {
+    animation: phone-ring 2s infinite ease-in-out;
+  }
+}
+
+.call-button-block {
+  display: flex;
+  margin-bottom: 128px;
+
+  &_left {
+    justify-content: start;
+  }
+
+  &_center {
+    justify-content: center;
+  }
+
+  &_right {
+    justify-content: end;
+  }
+}
+
+@keyframes phone-ring {
+  0% {
+    transform: rotate(0) scale(1) skew(1deg)
+  }
+  10% {
+    transform: rotate(-25deg) scale(1) skew(1deg)
+  }
+  20% {
+    transform: rotate(25deg) scale(1) skew(1deg)
+  }
+  30% {
+    transform: rotate(-25deg) scale(1) skew(1deg)
+  }
+  40% {
+    transform: rotate(25deg) scale(1) skew(1deg)
+  }
+  50% {
+    transform: rotate(0) scale(1) skew(1deg)
+  }
+  100% {
+    transform: rotate(0) scale(1) skew(1deg)
+  }
+}

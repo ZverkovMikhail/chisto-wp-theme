@@ -1,0 +1,106 @@
+@import "../vars";
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  & p {
+    margin: 0;
+  }
+
+  & > p {
+    display: none;
+  }
+& .call-button{
+  padding: 16px 48px;
+}
+  & .captcha-image {
+    display: block;
+    border-radius: 8px;
+    border: 2px solid $color-accent-lite;
+    background-color: $color-accent-lite;
+
+    & svg path {
+      fill: $color-text-alt;
+    }
+
+    & label > input:checked + svg, .captcha-image label > input:focus + svg {
+      border: 2px solid $color-text-alt;
+      border-radius: 8px;
+    }
+
+    & .cf7ic_instructions span {
+      color: $color-text-alt;
+    }
+  }
+  & .wpcf7-response-output{
+    border-radius: 8px;
+  }
+  &.invalid .wpcf7-response-output {
+    border: 2px solid $color-button !important;
+    padding: 8px;
+  }
+
+  &__field-wrap {
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    top: -32px;
+    left: 4px;
+    font-family: $font-family-title;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 0.045rem;
+
+    &_attach {
+      font-family: $font-family-title;
+      font-size: 1.125rem;
+      font-weight: 400;
+      letter-spacing: 0.045rem;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 8px;
+      margin-top: -24px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.045rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 2px solid $color-accent-lite !important;
+    background-color: $color-accent-lite !important;
+    color: $color-text-alt !important;
+
+    &:focus {
+      outline-color: $color-accent-alt !important;
+    }
+
+    &_question {
+      resize: none;
+      height: 239px;
+    }
+  }
+
+  &__image-input {
+    display: none;
+  }
+
+  &__submit {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+
+}

@@ -1,0 +1,21 @@
+{
+  "name": "sofacleanexpert/gallery",
+  "title": "Gallery",
+  "description": "A custom Gallery block.",
+  "style": [],
+  "category": "sofacleanexpert",
+  "icon": "embed-generic",
+  "keywords": ["about", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "gallery.php"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview"
+    }
+  }
+}

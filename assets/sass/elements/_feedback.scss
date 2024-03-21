@@ -1,0 +1,40 @@
+@import "../vars";
+
+.feedback {
+  background-color: $color-background-alt;
+
+  &__content {
+    display: flex;
+    gap: 16px;
+
+    & .wpcf7 {
+      flex-basis: 50%;
+
+      &-form-control::placeholder {
+        color: $color-input-placeholder;
+      }
+    }
+  }
+
+  &__img-wrap {
+    flex-basis: 50%;
+    align-self: start;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 416px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .feedback {
+    padding-top: 0;
+
+    &__content {
+      flex-direction: column;
+    }
+
+    &__title {
+      margin-top: 80px;
+    }
+  }
+}

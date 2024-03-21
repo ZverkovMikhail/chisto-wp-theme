@@ -1,0 +1,213 @@
+@import "../vars";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: $color-background-alt;
+  min-height: 90px;
+}
+.logo {
+  display: flex;
+  gap: 6px;
+
+  &__img {
+
+  }
+
+  &__vl {
+    height: 46px;
+    width: 1px;
+    background-color: $color-accent-lite;
+  }
+
+  &__text-wrap {
+
+  }
+
+  &__title {
+    font-family: $font-family-title;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: normal;
+    color: $color-accent-lite;
+    letter-spacing: 0.0125rem;
+  }
+
+  &__subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.01rem;
+    color: $color-text;
+  }
+}
+.burger {
+  display: none;
+
+  &__checkbox {
+    display: none;
+  }
+}
+.menu {
+  &__list {
+    display: flex;
+    gap: 32px;
+  }
+
+  & .social, & .contact, &__button-close {
+    display: none;
+  }
+
+  & .menu-item a {
+    color: $color-text;
+    font-size: 1rem;
+    transition: color 0.2s;
+
+    &:hover, .current-menu-item {
+      color: $color-accent-lite;
+    }
+
+    &_active {
+      color: $color-accent;
+    }
+  }
+
+  & .current-menu-item a {
+    color: $color-accent-lite;
+  }
+}
+@media (max-width: 800px) {
+  .header {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-background-alt;
+    .burger {
+      position: fixed;
+      display: block;
+      top: 34px;
+      right: 32px;
+      margin: 0;
+      width: 32px;
+      height: 23px;
+      cursor: pointer;
+      z-index: 10000;
+
+      span {
+        width: 100%;
+        transition: .3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+        height: 3px;
+        background: $color-text;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        transform: rotate(0);
+        border-radius: 3px;
+
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          bottom: 50%;
+          transform: translateY(50%);
+        }
+
+        &:nth-child(3) {
+          bottom: 0;
+        }
+      }
+
+      &__checkbox:checked {
+        & ~ .menu {
+          opacity: 1;
+          height: 100vh;
+          overflow: auto;
+          padding: 72px 0;
+
+          & .menu__list {
+            opacity: 1;
+          }
+        }
+
+        & ~ .burger {
+          position: fixed;
+
+          span {
+            &:nth-child(1) {
+              top: 40%;
+              transform: rotate(-45deg);
+            }
+
+            &:nth-child(2) {
+              bottom: -4px;
+            }
+
+            &:nth-child(3) {
+              bottom: 45%;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+      align-items: center;
+      opacity: 0;
+      height: 0;
+      width: 100vw;
+      overflow: hidden;
+      position: fixed;
+      background-color: $color-background-menu;
+      top: 0;
+      left: 0;
+      padding: 0;
+      transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+      z-index: 1000;
+
+      & .social {
+        display: flex;
+      }
+
+      & .contact {
+        display: flex;
+
+        & .contact__item {
+          gap: 8px;
+        }
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        width: fit-content;
+        opacity: 0;
+        transition: opacity 0.1s;
+      }
+
+      &__link {
+        color: $color-text;
+        font-size: 1.25rem;
+        padding: 16px;
+        transition: color 0.2s;
+
+        &:hover {
+          color: $color-accent-lite;
+        }
+
+        &_active {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+}

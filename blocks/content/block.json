@@ -1,0 +1,16 @@
+{
+  "name": "sofacleanexpert/content",
+  "title": "Content wrapper",
+  "description": "Block wrapper for custom content.",
+  "style": [],
+  "category": "sofacleanexpert",
+  "icon": "embed-generic",
+  "keywords": ["about", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "content.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}

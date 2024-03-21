@@ -1,0 +1,29 @@
+@import "../vars";
+
+.blog {
+  &__carts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    row-gap: 32px;
+    align-items: stretch;
+    justify-content: start;
+    & .blog-cart {
+      flex-basis: 368px;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .blog {
+    &__carts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      row-gap: 32px;
+      justify-content: center;
+      & .blog-cart {
+        flex-basis: 560px;
+      }
+    }
+  }
+}

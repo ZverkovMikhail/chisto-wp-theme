@@ -1,0 +1,21 @@
+{
+  "name": "sofacleanexpert/contacts-block",
+  "title": "Contacts block",
+  "description": "A custom Contacts block.",
+  "style": [],
+  "category": "sofacleanexpert",
+  "icon": "embed-generic",
+  "keywords": ["about", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "contacts-block.php"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview"
+    }
+  }
+}

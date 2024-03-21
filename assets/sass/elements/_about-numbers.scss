@@ -1,0 +1,76 @@
+@import "../vars";
+
+.about-numbers {
+  background-color: $color-background-alt;
+
+  &__content {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__item {
+    flex-basis: 100%;
+  }
+
+  &__number {
+    font-family: $font-family-title;
+    font-size: 3.25rem;
+    font-weight: 700;
+    color: $color-accent;
+    text-align: center;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background-color: $color-accent;
+      margin: 32px 16px 16px;
+    }
+
+    &_greater::before {
+      content: '>';
+    }
+  }
+
+  &__text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1280px) {
+  .about-numbers__number {
+    font-size: 2.75rem;
+    line-height: 2.125rem;
+
+  }
+}
+
+@media (max-width: 800px) {
+  .about-numbers {
+    &__item:not(:last-child):after {
+      content: '';
+      display: block;
+      height: 2px;
+      background-color: $color-accent;
+      margin: 64px 0 38px;
+    }
+
+    &__number {
+      text-align: start;
+      margin-bottom: 24px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__text {
+      text-align: start;
+    }
+
+    &__content {
+      flex-direction: column;
+    }
+  }
+
+}

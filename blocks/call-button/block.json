@@ -1,0 +1,26 @@
+{
+  "name": "sofacleanexpert/button",
+  "title": "Button",
+  "description": "A custom Button.",
+  "style": [],
+  "category": "sofacleanexpert",
+  "icon": "button",
+  "keywords": [
+    "quote"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "button.php"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "text": "Waiting for call"
+      }
+    }
+  }
+}

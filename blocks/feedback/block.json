@@ -1,0 +1,21 @@
+{
+  "name": "sofacleanexpert/feedback",
+  "title": "Feedback",
+  "description": "A custom Feedback block.",
+  "style": [],
+  "category": "sofacleanexpert",
+  "icon": "embed-generic",
+  "keywords": ["about", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "feedback.php"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview"
+    }
+  }
+}

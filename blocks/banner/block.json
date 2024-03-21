@@ -1,0 +1,26 @@
+{
+  "name": "sofacleanexpert/banner",
+  "title": "Banner",
+  "description": "A custom Banner block.",
+  "style": [],
+  "category": "sofacleanexpert",
+  "icon": "",
+  "keywords": [
+    "banner",
+    "quote"
+  ],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "banner.php"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+      }
+    }
+  }
+}

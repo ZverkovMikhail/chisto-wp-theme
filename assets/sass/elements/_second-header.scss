@@ -1,0 +1,146 @@
+@import "../vars";
+
+.second-header {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  position: relative;
+  height: 480px;
+
+  &__plate {
+    width: fit-content;
+    max-width: 75vw;
+    border-radius: 16px 16px 0 0;
+    padding: 24px 96px 8px;
+    background-color: $color-background;
+    z-index: 2;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.8rem;
+    margin-bottom: 0;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__img-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  &__img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 0;
+
+    &_left {
+      left: 0;
+    }
+
+    &_right {
+      right: 0;
+    }
+
+    &_center {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  row-gap: 0;
+
+  &__item {
+    font-size: 1rem;
+  }
+
+  &__link {
+    font-size: 1rem;
+    color: $color-accent;
+
+    &:hover {
+      color: $color-background-alt;
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .second-header {
+    &__curtain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: calc((100vw - 2000px) / 2);
+      background-color: $color-background-alt;
+
+      z-index: 3;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: calc((100vw - 2000px) / 2);
+        height: 100%;
+        width: 212px;
+
+      }
+
+      &_right {
+        left: auto;
+        right: 0;
+
+        &:after {
+          left: auto;
+          right: calc((100vw - 2000px) / 2);
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__img {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .second-header {
+    height: 334px;
+    background-position: left top;
+
+    &__plate {
+      min-width: 315px;
+      max-width: 100%;
+      padding: 26px 16px;
+      transform: translateY(56px);
+    }
+    .breadcrumb {
+      gap: 8px;
+      row-gap: 0;
+
+      &__link, &__item {
+        font-size: 0.875rem;
+        line-height: 0.875rem;
+      }
+    }
+  }
+}

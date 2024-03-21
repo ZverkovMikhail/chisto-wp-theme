@@ -1,0 +1,149 @@
+@import "../vars";
+
+.footer {
+  padding-top: 64px;
+  padding-bottom: 32px;
+  background-color: $color-background-footer;
+  margin-top: auto;
+  margin-bottom: 0;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr auto;
+    column-gap: 64px;
+    row-gap: 44px;
+  }
+
+  & .social {
+    grid-column: 1 / 3;
+    justify-content: center;
+    margin: 0;
+
+    & .social-link {
+      & .social-icon {
+        fill: $color-accent-alt;
+
+      }
+
+      &:hover .social-icon {
+        fill: $color-accent-lite;
+      }
+    }
+
+  }
+
+  & .contact {
+    & a {
+      color: $color-text-alt;
+
+      &:hover {
+        color: $color-accent-lite;
+      }
+    }
+
+  }
+  & .contact__item {
+    color: $color-text-alt;
+
+    &:hover {
+      & .contact__text {
+        color: $color-accent-lite;
+      }
+
+      & .contact__icon {
+        fill: $color-accent-lite;
+      }
+    }
+  }
+
+  & .contact__icon {
+    fill: $color-accent-alt;
+  }
+  &__quote {
+    color: $color-text-alt;
+    font-family: $font-family-title;
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    margin-top: -8px;
+  }
+
+  &__links-wrap {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    &-row {
+      display: flex;
+      gap: 32px;
+      flex-direction: row;
+    }
+  }
+
+  &__link {
+    font-size: 0.75rem;
+    color: $color-text-alt;
+  }
+
+}
+
+@media (max-width: 1280px) {
+  .footer__quote {
+    color: $color-text-alt;
+    font-family: $font-family-title;
+    font-size: 1.65rem;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0.04rem;
+    margin-top: -8px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    height: auto;
+    padding-bottom: 32px;
+
+    &__content {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      row-gap: 44px;
+    }
+
+    & .social {
+      grid-column: 1;
+      grid-row: 1;
+
+    }
+
+    & .contact {
+      justify-self: center;
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    &__quote {
+      grid-column: 1;
+      grid-row: 3;
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+      letter-spacing: 0.01rem;
+      margin-top: 0;
+      justify-self: center;
+    }
+
+    &__links-wrap {
+      grid-column: 1;
+      grid-row: 4;
+
+      &-row {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  }
+}

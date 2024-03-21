@@ -1,0 +1,50 @@
+@import "../vars";
+
+.pagination {
+    display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 64px;
+  & .dots{
+    line-height: 2.5rem;
+    color: $color-accent;
+  }
+  & .page-numbers:not(.dots) {
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    height: 32px;
+    width: 32px;
+    align-items: center;
+    justify-content: center;
+    color: $color-accent;
+    border: 2px solid $color-accent;
+    border-radius: 16px;
+    transition: all 0.3s;
+    &.current {
+      color: $color-text-alt !important;
+      background-color: $color-accent !important;
+      border-color: $color-accent !important;
+
+    }
+
+    &:hover:not(.dots) {
+      color: $color-accent-lite;
+      border-color: $color-accent-lite;
+      & .pagination__icon{
+        fill: $color-accent-lite;
+        height: 20px;
+      }
+    }
+  }
+
+  &__icon {
+    height: 16px;
+    width: 16px;
+    fill: $color-accent;
+    transition: all 0.3s;
+    &_prev {
+        transform: rotate(180deg);
+    }
+  }
+}

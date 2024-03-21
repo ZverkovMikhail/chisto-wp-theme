@@ -1,0 +1,26 @@
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.125rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 27px;
+	color: #1b2a43;
+	background-color: #f6f4f2
+}
+
+.wp-block{
+	margin: 32px auto;
+	max-width: 100%;
+}
+.wp-block-paragraph{
+	margin: 16px;
+}
+h2, h3, h4{
+
+}
+.wp-block[data-align=left]>.wp-block-image {
+	margin: 8px 16px 0 0;
+}
+.wp-block[data-align=right]>.wp-block-image {
+	margin: 8px 0 0 16px;
+}

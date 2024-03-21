@@ -1,0 +1,49 @@
+{
+  "name": "sofacleanexpert/about-numbers",
+  "title": "About numbers",
+  "description": "A custom About numbers block.",
+  "style": [],
+  "category": "sofacleanexpert",
+  "icon": "",
+  "keywords": ["about", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "about-numbers.php"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "about_numbers": [
+          {
+            "number": "14",
+            "text": "Years in furniture cleaning services",
+            "is_display_greater_than_sign": false
+
+          },
+          {
+            "number": "17",
+            "text": "Specialists and technologists for extractor cleaning",
+            "is_display_greater_than_sign": false
+
+          },
+          {
+            "number": "9000",
+            "text": "Individuals and legal entities who contacted us",
+            "is_display_greater_than_sign": true
+
+          },
+          {
+            "number": "1400",
+            "text": "Cleaned sofas, chairs, armchairs and mattresses",
+            "is_display_greater_than_sign": true
+
+          }
+        ]
+      }
+    }
+  }
+}

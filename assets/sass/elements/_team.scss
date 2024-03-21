@@ -1,0 +1,86 @@
+@import "../vars";
+
+.team {
+  &__items-wrap {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+
+    &-wrap {
+      position: relative;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      &:after {
+        content: '';
+        border-radius: 50%;
+        box-shadow: inset 0px 4px 5px #d7d7d7;
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &__text {
+    width: 340px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1280px) {
+  .team {
+
+    &__img-wrap {
+      width: 224px;
+      height: 224px;
+    }
+
+    &__text {
+      width: 224px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .team {
+    &__content {
+      overflow: hidden;
+    }
+
+    &__items-wrap {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 32px;
+      overflow-x: scroll;
+      padding-bottom: 16px;
+    }
+    &__img-wrap {
+      width: calc(100vw / 1.8);
+      height: calc(100vw / 1.8);
+      max-width: 340px;
+      max-height: 340px;
+    }
+
+    &__text {
+      width: auto;
+      max-width: 340px;
+    }
+  }
+}

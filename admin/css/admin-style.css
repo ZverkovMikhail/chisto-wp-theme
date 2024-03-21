@@ -1,0 +1,31 @@
+.admin__banner-img{
+    width: 300px !important;
+    height: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none;
+}
+.gallery__image_before{
+    padding-right: 2px !important;
+}
+.gallery__image_before .image-wrap{
+    float: right !important;
+}
+.gallery__image_after{
+
+    padding-left: 2px !important;
+}
+.admin__notice-error{
+    color: #f63737;
+    font-size: 16px;
+}
+.admin__notice-error:before {
+    content: "!";
+    display: inline-block;
+
+    background-color: #f63737;
+    color: whitesmoke;
+    font-size: 16px;
+    padding: 6px 16px;
+    border-radius: 32px;
+}

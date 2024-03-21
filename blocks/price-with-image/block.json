@@ -1,0 +1,27 @@
+{
+  "name": "sofacleanexpert/price-list-with-images",
+  "title": "Price list with images",
+  "description": "A custom price list block with image.",
+  "style": [],
+  "category": "sofacleanexpert",
+  "icon": "embed-generic",
+  "keywords": ["about", "quote"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "price-with-image.php"
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "price_block_title": "PRICE",
+        "price_block_subtitle": "starts from",
+        "block_name": "price",
+        "example_img_src": ""
+      }
+    }
+  }
+}
